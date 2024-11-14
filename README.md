@@ -2,21 +2,23 @@
 
 ## Overview of the Analysis
 
-The purpose of this analysis is to develop and assess a machine learning model that predicts the creditworthiness of potential borrowers using a dataset of historical lending activity from a peer-to-peer lending company. By analyzing loan risk, the model aims to support the company's decision-making process by identifying borrowers with high and low credit risks.
+The purpose of this analysis is to develop and evaluate a machine learning model that predicts the creditworthiness of potential borrowers based on historical lending data from a peer-to-peer lending company. By identifying high- and low-risk borrowers, the model aims to enhance the decision-making process, reducing the likelihood of loan defaults and ensuring better management of risk.
 
 ## Results
 
+### Model with Original Data
 - **Balanced Accuracy Score**: 95.20%
-  - This score combines sensitivity (recall or true positive rate) and specificity (true negative rate), indicating that the model achieves a balanced prediction accuracy of 95.2%.
-  
 - **Precision Score**: 92%
-  - This score shows that 92% of positive predictions (high-risk loans) were correctly identified by the model.
-  
+  - Indicates that 92% of predicted high-risk loans were accurately identified.
 - **Recall Score**: 95%
-  - This score indicates that the model correctly identifies 95% of true positive values out of all positive predictions, showing its effectiveness in detecting high-risk loans.
+  - Reflects that the model correctly identified 95% of true positive values for high-risk loans.
+
+### Model with Resampled Data
+- **Balanced Accuracy Score**: TBD (calculated with resampled data)
+- **Precision Score**: TBD
+- **Recall Score**: TBD
 
 ## Summary
 
-The logistic regression model performed well, with a high accuracy rate (95.20%) and strong precision and recall scores. Based on these results, I recommend using this model for predicting borrower creditworthiness. Its accuracy and reliability make it a valuable tool for informing lending decisions, helping to minimize default risk and maintain sufficient capital flow for profitability. 
+The logistic regression model with the original data demonstrated high accuracy, precision, and recall, suggesting it is effective for predicting borrower creditworthiness. However, due to the initial imbalance in the dataset (fewer high-risk loans), the model was re-evaluated using a resampled training dataset with equal instances of high- and low-risk labels. This second evaluation aims to verify if oversampling improves model performance, particularly for identifying high-risk loans.
 
-Incorporating this model could enhance the company's ability to manage risk while potentially increasing loan approval rates for low-risk borrowers.
